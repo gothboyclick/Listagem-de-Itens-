@@ -1,23 +1,3 @@
-<?php
-require_once './database/conexao.php'; //inclui o arquivo para conexão ao banco 
-require_once './controller/itemController.php';//iclui o arquivo que contém a lógica de contole de itens
-require_once './repository/itemRepository.php';//inclui a lógica de repositótio de itens 
-
-$conexao = new Conexao(); //instancia a classe de conexão 
-$conn = $conexao->getConexao(); //obtém a conexão 
-
-$itemRepository = new ItemRepository($conn);//instancia uma nova instância da classe ItemRepository, passando a conexão como argumento
-$itemController = new ItemController($itemRepository);//cria uma nova instância da classe ItemController, passando o repositório de itens como argumento
-
-$nome = isset($_POST['search']) ? $_POST['search'] : null;//verifica se a variável POST 'search' está definida, se estiver ele faz a pesquisa por nome, caso não ele apresenta todos os itens cadastrados
-
-if ($nome !== null) { //se $nome não for null, chama a função getItensPorNome do controlador de itens. Se for null, chama a função getItens do controlador de itens
-    $itens = $itemController->getItensPorNome($nome);
-} else {
-    $itens = $itemController->getItens();
-}
-?>
-
 <html>
 
 <head>

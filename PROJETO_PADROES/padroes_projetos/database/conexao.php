@@ -1,13 +1,13 @@
 <?php
 class Conexao //define a classe conexão 
 {
-    private $servidor = "localhost"; //variáveis que aramzenam dados para conexão ao banco
+    private $servidor = "127.0.0.1"; //variáveis que aramzenam dados para conexão ao banco
     private $usuario = "root";
-    private $senha = "";
+    private $senha = "123456789";
     private $dbname = "estoque";
     private $conn;
 
-    public function getConexao() //função púbica que inicializa a variável conn como nula
+    public function getConexao() //função pública que inicializa a variável conn como nula
     {
         $this->conn = null;
 

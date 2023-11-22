@@ -1,7 +1,7 @@
 <?php
-	$servidor = "localhost";
+	$servidor = "127.0.0.1";
 	$usuario = "root";
-	$senha = "";
+	$senha = "123456789";
 	$dbname = "estoque";
 	
 	
