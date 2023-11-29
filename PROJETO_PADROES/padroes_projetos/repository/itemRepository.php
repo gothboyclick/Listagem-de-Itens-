@@ -1,7 +1,8 @@
 <?php
 require_once './model/item.php';//inclui o arquivo que contém a definição da classe item 
+require_once './controller/itemControllerInterface.php';
 
-class ItemRepository//define a classe ItemRepository 
+class ItemRepository implements itemControllerInterface//define a classe ItemRepository 
 {
     private $conexao;
 
